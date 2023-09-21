@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 {
+            color: #d39191;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .box {
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: rgb(143, 143, 143);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Array Methods Demo</h1>
+    </header>
+    <div class="container">
+        <div class="box" id="pushDemo">
+            <h2>push() Method</h2>
+            <button onclick="thePush()">Click Me</button>
+        </div>
+        <div class="box" id="popDemo">
+            <h2>pop() Method</h2>
+            <button onclick="thePop()">Click Me</button>
+        </div>
+        
+    <script>
+        
+        let myArray = ["Anime", "Memes", "Music"];
+
+        function thePush() {
+            myArray.push("Video Games");
+            alert("Item 'Video Games' added to the array. Updated array: " + myArray.join(', '));
+        }
+
+        function thePop() {
+            let removedItem = myArray.pop();
+            if (removedItem !== undefined) {
+                alert("Item removed from the array: " + removedItem);
+            } else {
+                alert("Array is empty.");
+            }
+        }
+
+    </script>
+</body>
+</html>
